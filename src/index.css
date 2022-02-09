@@ -11,3 +11,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.app-wrapper{
+  display: flex;
+  margin-top: 20px;
+}
+
+.news-feed{
+  background-color: rgb(204, 204, 231);
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+  max-width: 450px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.currency-converter{
+  background-color: rgb(152, 85, 240);
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.exchange-rate{
+  background-color: rgb(204, 204, 231);
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  text-align: center;
+}
+
+.btn{
+  margin-top: 15px;
+}
+
+.form-select{
+  margin-top: 1px;
+  margin-left: 3px;
+}
+/* .btn:hover{
+  background-color: rgb(51, 3, 3);
+} */
+
