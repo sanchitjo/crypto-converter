@@ -12,7 +12,7 @@ const NewsFeed = () => {
 
     const options = {
       method: 'GET',
-      url: 'http://localhost:5000/news',
+      url: 'https://crypto-backend0.herokuapp.com/news',
 
     };
 
