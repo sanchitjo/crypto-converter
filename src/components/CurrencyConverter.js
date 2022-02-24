@@ -20,7 +20,7 @@ const CurrencyConverter = () => {
 
     const options = {
       method: 'GET',
-      url: 'http://localhost:5000/convert',
+      url: 'https://crypto-backend0.herokuapp.com/convert',
       params: { from_currency: primaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', to_currency: secondaryCurrency },
 
     };
