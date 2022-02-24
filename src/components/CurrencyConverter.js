@@ -20,19 +20,19 @@ const CurrencyConverter = () => {
 
     const options = {
       method: 'GET',
-      url: 'http://localhost:8000/convert',
+      url: 'http://localhost:5000/convert',
       params: { from_currency: primaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', to_currency: secondaryCurrency },
 
     };
 
     axios.request(options)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response);
+        
 
+        setexchangeRate(response.data.exchange_rate)
 
-        setexchangeRate(response.data)
-
-        setResult(response.data * amount)
+        setResult(response.data.exchange_rate * amount)
 
         setprimaryCurrencyExchanged(primaryCurrency)
         setsecondaryCurrencyExchanged(secondaryCurrency)
@@ -42,7 +42,7 @@ const CurrencyConverter = () => {
         console.error(error);
       });
   }
-  console.log(exchangeRate)
+  // console.log(exchangeRate)
 
 
   return (
@@ -53,7 +53,7 @@ const CurrencyConverter = () => {
         <table>
           <tbody>
             <tr>
-              <td><strong>Primary Currency : </strong></td>
+              <td><strong>Primary Currency: </strong></td>
               <td>
                 <input
                   className='form-control'
@@ -75,7 +75,7 @@ const CurrencyConverter = () => {
             </tr>
 
             <tr>
-              <td><strong>Secondary Currency : </strong></td>
+              <td><strong>Secondary Currency: </strong></td>
               <td>
                 <input
                   className='form-control'
